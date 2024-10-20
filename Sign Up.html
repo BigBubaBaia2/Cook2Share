@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title> 
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; 
+        }
+
+        input[type="text"], 
+        input[type="password"], 
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50; 
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%; /* Make the button take full width */
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+            <button type="submit">Sign Up</button>
+            <div class="error" id="errorMessage"></div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('signupForm');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password === confirmPassword) {
+                // Passwords match - typically you'd send data to server here
+                errorMessage.textContent = '';
+                // For demo purposes:
+                alert('Sign up successful! (This is a demo, no data is saved.)');
+                form.reset();
+            } else {
+                errorMessage.textContent = 'Passwords do not match!';
+            }
+        });
+    </script>
+</body>
+</html>
+

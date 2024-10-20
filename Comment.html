@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeGram - Comments</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-left i, 
+        .header-right i {
+            font-size: 20px;
+            margin: 0 10px;
+        }
+
+        .comments-section {
+            padding: 20px;
+            flex-grow: 1; /* Allow comments to take up available space */
+            overflow-y: auto; /* Add vertical scrollbar if content overflows */
+        }
+
+        .comment {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .comment .user-picture {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .comment .message {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .post-preview {
+            width: 100%;
+            padding-bottom: 100%; /* Maintain aspect ratio */
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .post-preview img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid #ddd;
+        }
+
+        footer input[type="text"] {
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 8px 12px;
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+
+        footer button {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <span class="time">9:41</span>
+        </div>
+        <div class="header-right">
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-battery-half"></i>
+        </div>
+    </header>
+
+    <div class="comments-section">
+        <div class="comment">
+            <img src="https://via.placeholder.com/40" alt="Profile Picture" class="user-picture">
+            <div class="message">
+                This looks delicious! What's your recipe?
+            </div>
+        </div>
+
+        <div class="comment">
+            <img src="https://via.placeholder.com/40" alt="Profile Picture" class="user-picture">
+            <div class="message">
+                I can't wait to try this!
+            </div>
+        </div>
+
+        <div class="post-preview">
+            <img src="https://via.placeholder.com/300x300" alt="Post Preview">
+        </div>
+    </div>
+
+    <footer>
+        <input type="text" placeholder="Text input">
+        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        <button type="button"><i class="far fa-face-smile"></i></button>
+        <button type="button"><i class="fas fa-microphone"></i></button>
+    </footer>
+</body>
+</html>
+
