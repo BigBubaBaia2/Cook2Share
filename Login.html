@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +24,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        input[type="text"],
+        input[type="email"],
         input[type="password"] {
             width: 100%;
             padding: 15px;
@@ -34,7 +35,7 @@
         }
 
         button {
-            background-color: #4CAF50;
+            background-color: #0ddfdf;
             color: white;
             padding: 15px 20px;
             margin: 10px 0;
@@ -61,15 +62,16 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h2>Login</h2>
         <form>
             <label for="email">Email address:</label><br>
-            <input type="text" id="email" name="email" placeholder="Enter your email"><br><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required aria-label="Email address"><br><br>
 
             <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" placeholder="Enter your password"><br><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required aria-label="Password"><br><br>
 
             <button type="submit">Sign In</button>
         </form>
@@ -80,4 +82,5 @@
         </div>
     </div>
 </body>
+
 </html>
