@@ -6,12 +6,23 @@
     <title>RecipeGram - Cookbook</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --text-color: #212529;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            scroll-behavior: smooth;
+            padding-bottom: 60px;
         }
 
         header {
@@ -21,38 +32,60 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .header-left button {
             background: none;
             border: none;
-            padding: 0;
+            padding: 8px;
             cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .header-left button:hover {
+            transform: scale(1.1);
         }
 
         .header-left i {
             font-size: 20px;
-            margin-right: 10px; 
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .header-right i {
+            font-size: 20px;
+            margin: 0 10px;
         }
 
         h2 {
             text-align: center;
-            margin: 20px 0; /* Add margin above and below the title */
+            margin: 20px 0;
             font-size: 2em;
+            color: var(--primary-color);
         }
 
         .gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 2px;
-            padding: 10px;
+            gap: 10px;
+            padding: 15px;
         }
 
         .gallery-item {
             width: 100%;
-            padding-bottom: 100%; /* Maintain aspect ratio */
+            padding-bottom: 100%;
             position: relative;
             overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
         }
 
         .gallery-item img {
@@ -62,54 +95,102 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .gallery-item img[loading] {
+            opacity: 0.5;
+        }
+
+        @media (min-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                gap: 5px;
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        /* Add loading animation */
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
+        .gallery-item.loading {
+            animation: pulse 1.5s infinite;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-left">
-            <button onclick="goBack()">
+            <button onclick="goBack()" aria-label="Go back">
                 <i class="fas fa-arrow-left"></i> 
             </button>
             <span class="time">9:41</span>
         </div>
         <div class="header-right">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-signal"></i>
-            <i class="fas fa-battery-half"></i>
+            <i class="fas fa-wifi" aria-label="WiFi"></i>
+            <i class="fas fa-signal" aria-label="Signal"></i>
+            <i class="fas fa-battery-half" aria-label="Battery"></i>
         </div>
     </header>
 
-    <h2>Cookbook</h2> 
+    <h2>My Cookbook</h2> 
 
     <main>
         <div class="gallery">
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x300" alt="Dish 1">
+                <img src="https://via.placeholder.com/300x300" alt="Dish 1" loading="lazy">
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x300" alt="Dish 2">
+                <img src="https://via.placeholder.com/300x300" alt="Dish 2" loading="lazy">
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x300" alt="Dish 3">
+                <img src="https://via.placeholder.com/300x300" alt="Dish 3" loading="lazy">
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x300" alt="Dish 4">
+                <img src="https://via.placeholder.com/300x300" alt="Dish 4" loading="lazy">
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x300" alt="Dish 5">
+                <img src="https://via.placeholder.com/300x300" alt="Dish 5" loading="lazy">
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/300x300" alt="Dish 6">
+                <img src="https://via.placeholder.com/300x300" alt="Dish 6" loading="lazy">
             </div>
         </div>
     </main>
 
     <script>
         function goBack() {
-            window.history.back(); 
+            window.history.back();
         }
+
+        // Add loading animation to images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.gallery-item img');
+            images.forEach(img => {
+                img.parentElement.classList.add('loading');
+                img.onload = function() {
+                    this.parentElement.classList.remove('loading');
+                }
+            });
+        });
     </script>
 </body>
 </html>
-
