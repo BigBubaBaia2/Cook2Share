@@ -13,59 +13,33 @@
             flex-direction: column;
             min-height: 100vh;
         }
-
-        header {
-            background-color: #fff;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-        }
-
-        .header-left i, 
-        .header-right i {
-            font-size: 20px;
-            margin: 0 10px;
-        }
-
         .comments-section {
             padding: 20px;
-            flex-grow: 1; /* Allow comments to take up available space */
-            overflow-y: auto; /* Add vertical scrollbar if content overflows */
+            flex-grow: 1;
+            overflow-y: auto;
         }
-
         .comment {
             display: flex;
             margin-bottom: 15px;
         }
-
         .comment .user-picture {
             width: 40px;
             height: 40px;
             border-radius: 50%;
             margin-right: 10px;
         }
-
         .comment .message {
             background-color: #f0f0f0;
             padding: 10px;
             border-radius: 10px;
         }
-
         .post-preview {
             width: 100%;
-            padding-bottom: 100%; /* Maintain aspect ratio */
+            padding-bottom: 100%;
             position: relative;
             overflow: hidden;
             margin-bottom: 10px;
         }
-
         .post-preview img {
             position: absolute;
             top: 0;
@@ -74,7 +48,6 @@
             height: 100%;
             object-fit: cover;
         }
-
         footer {
             background-color: #fff;
             padding: 10px;
@@ -82,7 +55,6 @@
             align-items: center;
             border-top: 1px solid #ddd;
         }
-
         footer input[type="text"] {
             border: 1px solid #ccc;
             border-radius: 20px;
@@ -90,7 +62,6 @@
             flex-grow: 1;
             margin-right: 10px;
         }
-
         footer button {
             background-color: transparent;
             border: none;
@@ -101,17 +72,6 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-left">
-            <span class="time">9:41</span>
-        </div>
-        <div class="header-right">
-            <i class="fas fa-wifi"></i>
-            <i class="fas fa-signal"></i>
-            <i class="fas fa-battery-half"></i>
-        </div>
-    </header>
-
     <div class="comments-section">
         <div class="comment">
             <img src="https://via.placeholder.com/40" alt="Profile Picture" class="user-picture">
@@ -119,19 +79,16 @@
                 This looks delicious! What's your recipe?
             </div>
         </div>
-
         <div class="comment">
             <img src="https://via.placeholder.com/40" alt="Profile Picture" class="user-picture">
             <div class="message">
                 I can't wait to try this!
             </div>
         </div>
-
         <div class="post-preview">
             <img src="https://via.placeholder.com/300x300" alt="Post Preview">
         </div>
     </div>
-
     <footer>
         <input type="text" placeholder="Text input">
         <button type="submit"><i class="fas fa-paper-plane"></i></button>
@@ -140,4 +97,3 @@
     </footer>
 </body>
 </html>
-
