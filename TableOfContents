@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Contents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Table of Contents</h1>
+        <a href="Login.html" class="button">File 1</a>
+        <a href="Sign Up.html" class="button">File 2</a>
+        <a href="Forgot_Password.html" class="button">File 3</a>
+        <a href="Home.html" class="button">File 4</a>
+        <a href="Profile.html" class="button">File 5</a>
+        <a href="Recipe.html" class="button">File 6</a>
+        <a href="Upload.html" class="button">File 7</a>
+        <a href="Search.html" class="button">File 8</a>
+        <a href="CookBook.html" class="button">File 9</a>
+        <a href="Message.html" class="button">File 10</a>
+        <a href="Comment.html" class="button">File 11</a>
+        <a href="Account.html" class="button">File 12</a>
+        <a href="Notification.html" class="button">File 13</a>
+    </div>
+</body>
+</html>
