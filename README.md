@@ -13,4 +13,4 @@ With Cook2Share, you can easily upload your favorite recipes, browse a variety o
 - Organize Your Favorites: Create personalized collections for meal planning, special occasions, or go-to snacks.
 - Interactive Features: Watch how-to videos, join recipe challenges, and share your cooking journey with friends.
 
-Whether you're an aspiring chef or just love cooking, SavorSnap brings foodies together for the love of great meals.
+Whether you're an aspiring chef or just love cooking, Cook2Share brings foodies together for the love of great meals.
