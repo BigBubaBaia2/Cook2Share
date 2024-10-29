@@ -42,7 +42,7 @@
         <a href="CookBook.html" class="button">File 9</a>
         <a href="Message.html" class="button">File 10</a>
         <a href="Comment.html" class="button">File 11</a>
-        <a href="Account.html" class="button">File 12</a>
+        <a href="User_Account.html" class="button">File 12</a>
         <a href="Notification.html" class="button">File 13</a>
     </div>
 </body>
