@@ -31,19 +31,19 @@
 <body>
     <div class="container">
         <h1>Table of Contents</h1>
-        <a href="Login.html" class="button">File 1</a>
-        <a href="Sign Up.html" class="button">File 2</a>
-        <a href="Forgot_Password.html" class="button">File 3</a>
-        <a href="Home.html" class="button">File 4</a>
-        <a href="Profile.html" class="button">File 5</a>
-        <a href="Recipe.html" class="button">File 6</a>
-        <a href="Upload.html" class="button">File 7</a>
-        <a href="Search.html" class="button">File 8</a>
-        <a href="CookBook.html" class="button">File 9</a>
-        <a href="Message.html" class="button">File 10</a>
-        <a href="Comment.html" class="button">File 11</a>
-        <a href="User_Account.html" class="button">File 12</a>
-        <a href="Notification.html" class="button">File 13</a>
+        <a href="Login.html" class="button">Login</a>
+        <a href="Sign Up.html" class="button">Sign Up?</a>
+        <a href="Forgot_Password.html" class="button">Forgot Password?</a>
+        <a href="Home.html" class="button">Home</a>
+        <a href="Profile.html" class="button">User Profile</a>
+        <a href="Recipe.html" class="button">Recipe</a>
+        <a href="Upload.html" class="button">Upload</a>
+        <a href="Search.html" class="button">Search</a>
+        <a href="CookBook.html" class="button">CookBook</a>
+        <a href="Message.html" class="button">Message</a>
+        <a href="Comment.html" class="button">Comment</a>
+        <a href="User_Account.html" class="button">User Account</a>
+        <a href="Notification.html" class="button">Notifications</a>
     </div>
 </body>
 </html>
